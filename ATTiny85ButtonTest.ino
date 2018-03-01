@@ -1,14 +1,22 @@
-// This is a demonstration on how to use an input device to trigger changes on your neo pixels.
-// You should wire a momentary push button to connect from ground to a digital IO pin.  When you
-// press the button it will change to a new pixel animation.  Note that you need to press the
-// button once to start the first animation!
+// If flashing on Sparkfun ATTiny flasher remember to burn bootloader
+// This will set the fuses at the correct speed- 8Mhz internal
+// Then you can
+// If flashing on Sparkfun ATTiny flasher remember to burn bootloader FIRST
+// This will set the fuses at the correct speed- 8Mhz internal
+// Then you can flash the Neopix sketch
+// If you are getting all white or odd patterns - bootloader is not burned..
+// Skip this if you are using the Kickstarter ATTIny85
+// Set your board to ATTiny
+// Set sub board to to ATTiny 85
+// Set speed to 8 Mhz (internal)
+// Set programer to USBtinyISP
+// Flash the chip and you are good to go..
 
 #include <Adafruit_NeoPixel.h>
 
 #define BUTTON_PIN   2    // Digital IO pin connected to the button.  This will be
                           // driven with a pull-up resistor so the switch should
-                          // pull the pin to ground momentarily.  On a high -> low
-                          // transition the button press logic will execute.
+                          // pull the pin to ground momentarily.  Link to ground
 
 #define PIXEL_PIN    4    // Digital IO pin connected to the NeoPixels.
 
